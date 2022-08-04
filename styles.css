@@ -1,0 +1,25 @@
+html {
+    height: 100%;
+    background-color: #b4d0c7a1;
+  }
+  
+  body {
+    margin-left: 6%;
+    margin-right: 6%;
+    
+  }
+  
+  header {
+    width:94%;
+    height:28%;
+    background-image: url("./images/flags.png"); 
+    background-size:cover;
+    margin: auto;
+    padding: 5px;
+    border-top: 10px;
+    border-bottom: 10px;
+    border: 3px rgb(0, 0, 0) solid;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
