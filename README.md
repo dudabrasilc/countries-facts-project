@@ -2,16 +2,6 @@
 
 Countries Facts is a a web application which you can search a country and find facts about it.
 
-## Installation
-
-NOT NEEDED ??
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
-
 ## Usage
 
 ```python
@@ -33,4 +23,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/)# countries-facts-project
