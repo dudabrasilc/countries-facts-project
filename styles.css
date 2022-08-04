@@ -74,3 +74,59 @@ html {
     padding: 5px;
     font-size: 20pt;
   }
+
+  #entry {
+    background-color: rgba(223, 229, 230, 0.56);
+    width: 62%;
+    margin:auto;
+    margin-bottom: 10px;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    font-style: italic;
+    font-family: optima;
+    margin-top: 14px;
+    font-size: larger;
+    padding: 6px;
+    border: dotted rgb(7, 6, 6) 2px;
+    border-style: groove;
+  }
+
+  #flag {
+    color: black;
+    /* font-weight:600; */
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-size: 80pt;
+    margin-bottom: 12px;
+    margin-top: 15px;
+  }
+  
+  h1#name {
+    text-align: center;
+    font-family: optima;
+    font-style: italic;
+    color: #156f71;
+    margin-bottom: 12px;
+    margin-top: 15px;
+    text-shadow: 3px 3px black;
+    font-size: 52pt;
+  }
+  
+  #searchBtn {
+    border: 2.3px rgb(0, 0, 0) solid;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .button {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    margin: 8px;
+    font-weight:500;
+    border-radius: 10%;
+    font-family: optima;
+    background-color: rgba(212, 216, 217, 0.069);
+    border: 3px, rgba(0, 213, 255, 0.639);
+  }
