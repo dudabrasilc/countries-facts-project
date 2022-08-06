@@ -12,7 +12,7 @@ html {
   header {
     width:94%;
     height:28%;
-    background-image: url("./images/flags.png"); 
+    background-image: url("./images/form-background.png"); 
     background-size:cover;
     margin: auto;
     padding: 5px;
@@ -124,9 +124,159 @@ html {
     color: rgb(0, 0, 0);
     padding: 8px;
     margin: 8px;
-    font-weight:500;
-    border-radius: 10%;
+    font-weight:600;
     font-family: optima;
-    background-color: rgba(212, 216, 217, 0.069);
+    background-color: rgba(34, 92, 106, 0.069);
     border: 3px, rgba(0, 213, 255, 0.639);
+  }
+
+  .buttons {
+    visibility: hidden;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    display: block;
+    padding: 7px;
+    background-color: ;
+    border: 2px black;
+    border-style: solid;
+    width: fit-content;
+  }
+  
+  #formInput{
+    color:rgb(0, 0, 0);
+    background-color: #b4d0c775;
+    border: 2px rgb(0, 0, 0) solid;
+    font-family: optima;
+  }
+  
+  ::placeholder {
+    color: rgba(0, 0, 0, 0.75);
+    opacity: 1;
+  }
+  
+  #mainImg{
+    visibility: hidden;
+    width: 76%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    border: 2px dotted rgb(78, 20, 94);
+    margin-bottom: 35px;
+    margin-top: 17px;
+    border-radius: 12px;
+  }
+  
+#artistDetails {
+    visibility: hidden;
+  }
+  
+  #artistDiscog {
+    visibility: hidden;
+  }
+  
+  #artistVids {
+    visibility: hidden;
+  }
+  
+  .mVids {
+    border-radius: 10px;
+    color: rgb(78, 20, 94);
+  }
+  
+  .albumImg {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 62%;
+    margin-top: 10px;
+    border: 1px black solid;
+  }
+  
+  .info {
+    text-align: center;
+    font-family: optima;
+    border: 2px white solid;
+    border-radius: 22px;
+    padding: 15px;
+    margin: 15px;
+    background-color: rgba(185, 163, 235, 0.706);
+  }
+  
+  .info:first-child {
+    margin-top: 0;
+  }
+  
+  .album {
+    color: rgb(78, 20, 94);
+  }
+  
+  #artistDetail {
+    color: rgb(78, 20, 94);
+    border: 2px white solid;
+    border-width: 2px; 
+  }
+  
+  .vidplayer {
+    width: 95%;
+    height:auto;
+  }
+  
+  h3.title {
+    font-family: optima;
+    font-size: 20pt;
+  }
+  
+  .nav {
+    padding: 17px;
+    border: 1px black dotted;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .nav:hover {
+    font-style: italic;
+    border: 1px black solid;
+  }
+  
+  ul {
+    text-align:left;
+    padding-left: 30%;
+  }
+  
+  #artistDetail > p:first-of-type {
+    font-size: large;
+    margin-top: 33px;
+  }
+  
+  .title {
+    text-shadow: rgba(255, 255, 255, 0.557) 1px 0 4px;
+    color: rgb(90, 20, 252);
+  }
+  
+  .vidContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+  
+  .vidContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  hr {
+    border-top: 2px dashed white;
+    border-bottom: 2px dashed white;
+    visibility: hidden;
+    width: 86%;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    height: 1px;
   }
