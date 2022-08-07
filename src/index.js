@@ -20,7 +20,7 @@ function form() {
         // Clear formInput value
         form.reset()
 
-        renderCountry(countryInput)
+        searchCountry(countryInput)
 
     })
 }
@@ -28,16 +28,16 @@ form()
 
 
 function notListed() {
-    const flag = document.querySelector("#flag")
-    flag.setAttribute("src", "")
-    const countryName = document.querySelector("#name")
-    countryName.innerHTML = "Not listed 😢"
-    countryName.style.fontSize = "60px"
+    const name = document.createElement("h1")
+    name.setAttribute("id", "name")
+    name.style.fontSize = "60px"
+    name.textContent = "Not listed 😢"
+    searchOutput.appendChild(name)
 }
 
 
 
-function renderCountry(countryInput) {
+function searchCountry(countryInput) {
     // FETCH REQUEST
     fetch('https://restcountries.com/v3.1/all')
     .then(response => response.json())
@@ -45,13 +45,12 @@ function renderCountry(countryInput) {
         const isListed = countries.find(country => {
             return countryInput === country.name.common })
             // console.log(isListed)
+            const searchOutput = document.querySelector("#searchOutput")
+            searchOutput.replaceChildren()
         if (isListed === undefined) {
-                notListed();
+            notListed()
         } else {
-                const flag = document.querySelector("#flag");
-                flag.setAttribute("src", isListed.flags.png)
-                const countryName = document.querySelector("#name");
-                countryName.textContent = isListed.name.common;
+                renderCountry(isListed)
                 renderButtons()
         }                       
     })
@@ -59,7 +58,7 @@ function renderCountry(countryInput) {
 
 
 function renderButtons() {
-    //create tags for buttons div
+    // create tags for buttons div
     const div = document.createElement("div")
     div.setAttribute("class", "buttons")
     div.setAttribute("style", "visibility: visible;")
@@ -70,9 +69,9 @@ function renderButtons() {
     span.appendChild(button)
     div.appendChild(span)
     }
-    const body = document.querySelector("body")
+    const searchOutput = document.querySelector("#searchOutput")
     // append created nodes to the DOM
-    body.appendChild(div)
+    searchOutput.appendChild(div)
     const divBtns = document.querySelector(".buttons")
     const mainFactsSpan = divBtns.childNodes[0]
     mainFactsSpan.firstChild.setAttribute("id", "main-facts")
@@ -83,9 +82,32 @@ function renderButtons() {
     const nameTransl = divBtns.childNodes[2]
     nameTransl.firstChild.setAttribute("id", "name-translations")
     nameTransl.firstChild.textContent = "Country Name Translations"
-
-
 }
+
+
+function renderCountry(isListed) {
+    // create function renderCountry(isListed)
+    const img = document.createElement("img");
+    img.setAttribute("src", isListed.flags.png)
+    img.setAttribute("id", "flag")
+    console.log(isListed)
+    const h1 = document.createElement("h1");
+    h1.textContent = isListed.name.common;
+    h1.setAttribute("id", "name")
+    const searchOutput = document.querySelector("#searchOutput")
+    searchOutput.appendChild(h1)
+    searchOutput.appendChild(img)
+}
+
+
+
+
+
+
+
+
+
+
 
 
 })
