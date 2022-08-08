@@ -117,17 +117,18 @@ html {
     border: 2.3px rgb(0, 0, 0) solid;
     font-weight: bold;
     cursor: pointer;
+    padding: 17px;
+    padding: 8px;
+    cursor: pointer;
   }
   
   .button {
     text-align: center;
     color: rgb(0, 0, 0);
-    padding: 8px;
     margin: 8px;
     font-weight:600;
     font-family: optima;
     background-color: rgba(34, 92, 106, 0.069);
-    border: 3px, rgba(0, 213, 255, 0.639);
   }
 
   .buttons {
@@ -135,10 +136,9 @@ html {
     text-align: center;
     margin: auto;
     margin-top: 30px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     display: block;
     padding: 7px;
-    background-color: ;
     border: 2px black;
     border-style: solid;
     width: fit-content;
@@ -168,10 +168,18 @@ html {
     margin-top: 17px;
     border-radius: 12px;
   }
-  
-#artistDetails {
+
+  #countryFacts {
     visibility: hidden;
   }
+
+  #topline {
+        height: 1px;
+        background-color: rgba(178, 172, 172, 0.762);
+        border: none;
+        margin-bottom: 20px;
+  }
+
   
   #artistDiscog {
     visibility: hidden;
@@ -197,12 +205,22 @@ html {
   
   .info {
     text-align: center;
+    list-style-position: inside;
     font-family: optima;
-    border: 2px white solid;
-    border-radius: 22px;
+    border: 2px black solid;
+    box-sizing: content-box;
     padding: 15px;
     margin: 15px;
-    background-color: rgba(185, 163, 235, 0.706);
+    text-indent: 10px;
+    background-color: rgba(255, 255, 255, 0.096);
+    padding-left: 0;
+  }
+
+  .item-list {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 0;
+
   }
   
   .info:first-child {
