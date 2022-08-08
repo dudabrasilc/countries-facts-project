@@ -30,7 +30,7 @@ form()
 function notListed() {
     const name = document.createElement("h1")
     name.setAttribute("id", "name")
-    name.style.fontSize = "60px"
+    name.style.fontSize = "50px"
     name.textContent = "Not listed 😢"
     searchOutput.appendChild(name)
 }
@@ -47,7 +47,7 @@ function searchCountry(countryInput) {
             // console.log(isListed)
             const searchOutput = document.querySelector("#searchOutput")
             searchOutput.replaceChildren()
-            const div = document.querySelector("#info")
+            const div = document.querySelector("#mainFacts")
             div.replaceChildren()
 
         if (listedCountry === undefined) {
@@ -55,7 +55,8 @@ function searchCountry(countryInput) {
         } else {
                 renderCountry(listedCountry)
                 renderButtons()
-                mainFactsBtn(listedCountry)
+                mainFacts(listedCountry)
+                curiousFacts(listedCountry)
         }                       
     })
 }
@@ -104,19 +105,26 @@ function renderCountry(listedCountry) {
 }
 
 
-function mainFactsBtn(listedCountry) {
+function mainFacts(listedCountry) {
     const mainBtn = document.querySelector("#main-facts")
+    const ul = document.createElement("ul")
+    const hr = document.createElement("hr")
 
     mainBtn.addEventListener("click", () => {
-    
-        const div = document.querySelector("#info")
-        console.log(div)
-        const ul = document.createElement("ul")
+        const div = document.querySelector("#mainFacts")
+
+        ul.replaceChildren()
+
+        div.appendChild(hr)
+        hr.setAttribute("id", "topline")
+        hr.setAttribute("style", "visibility: visible")
         div.appendChild(ul)
+        ul.setAttribute("class", "info")
+        
 
         for (let i = 0; i < 7; i++) {
         const li = document.createElement("li")
-        // FIGURE HOW TO BOLD STRING
+        li.setAttribute("class", "item-list")
 
         ul.appendChild(li)
         }
@@ -126,7 +134,8 @@ function mainFactsBtn(listedCountry) {
         ul.childNodes[3].innerHTML = `<b>Official Name: </b> ${listedCountry.name.official}`
         ul.childNodes[4].innerHTML = `<b>Region: </b> ${listedCountry.continents}`
         ul.childNodes[5].innerHTML = `<b>Languages: </b> ${Object.values(listedCountry.languages)}`
-        // ADD CURRENCIES
+        const cur = Object.values(listedCountry.currencies);
+        ul.childNodes[6].innerHTML = `<b>Currency: </b> ${cur[0].name}`
         
         const body = document.querySelector("body")
         body.appendChild(div)
@@ -135,7 +144,43 @@ function mainFactsBtn(listedCountry) {
 }
 
 
+function curiousFacts(listedCountry) {
+    const curiousBtn = document.querySelector("#curious-facts")
+    const ul = document.createElement("ul")
+    const hr = document.createElement("hr")
 
+    curiousBtn.addEventListener("click", () => {
+        const div = document.querySelector("#mainFacts")
+
+        ul.replaceChildren()
+
+        div.appendChild(hr)
+        hr.setAttribute("id", "topline")
+        hr.setAttribute("style", "visibility: visible")
+        div.appendChild(ul)
+        ul.setAttribute("class", "info")
+        
+
+        for (let i = 0; i < 7; i++) {
+        const li = document.createElement("li")
+        li.setAttribute("class", "item-list")
+
+        ul.appendChild(li)
+        }
+        ul.childNodes[0].innerHTML = `<b>Capital: </b> ${listedCountry.capital}`
+        ul.childNodes[1].innerHTML = `<b>Population: </b> ${listedCountry.population}`
+        ul.childNodes[2].innerHTML = `<b>Common Name: </b> ${listedCountry.name.common }`
+        ul.childNodes[3].innerHTML = `<b>Official Name: </b> ${listedCountry.name.official}`
+        ul.childNodes[4].innerHTML = `<b>Region: </b> ${listedCountry.continents}`
+        ul.childNodes[5].innerHTML = `<b>Languages: </b> ${Object.values(listedCountry.languages)}`
+        const cur = Object.values(listedCountry.currencies);
+        ul.childNodes[6].innerHTML = `<b>Currency: </b> ${cur[0].name}`
+        
+        const body = document.querySelector("body")
+        body.appendChild(div)
+    })
+
+}
 
 
 
