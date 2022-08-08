@@ -42,16 +42,20 @@ function searchCountry(countryInput) {
     fetch('https://restcountries.com/v3.1/all')
     .then(response => response.json())
     .then(countries => {
-        const isListed = countries.find(country => {
+        const listedCountry = countries.find(country => {
             return countryInput === country.name.common })
             // console.log(isListed)
             const searchOutput = document.querySelector("#searchOutput")
             searchOutput.replaceChildren()
-        if (isListed === undefined) {
+            const div = document.querySelector("#info")
+            div.replaceChildren()
+
+        if (listedCountry === undefined) {
             notListed()
         } else {
-                renderCountry(isListed)
+                renderCountry(listedCountry)
                 renderButtons()
+                mainFactsBtn(listedCountry)
         }                       
     })
 }
@@ -85,14 +89,14 @@ function renderButtons() {
 }
 
 
-function renderCountry(isListed) {
+function renderCountry(listedCountry) {
     // create function renderCountry(isListed)
     const img = document.createElement("img");
-    img.setAttribute("src", isListed.flags.png)
+    img.setAttribute("src", listedCountry.flags.png)
     img.setAttribute("id", "flag")
-    console.log(isListed)
+    console.log(listedCountry)
     const h1 = document.createElement("h1");
-    h1.textContent = isListed.name.common;
+    h1.textContent = listedCountry.name.common;
     h1.setAttribute("id", "name")
     const searchOutput = document.querySelector("#searchOutput")
     searchOutput.appendChild(h1)
@@ -100,7 +104,35 @@ function renderCountry(isListed) {
 }
 
 
+function mainFactsBtn(listedCountry) {
+    const mainBtn = document.querySelector("#main-facts")
 
+    mainBtn.addEventListener("click", () => {
+    
+        const div = document.querySelector("#info")
+        console.log(div)
+        const ul = document.createElement("ul")
+        div.appendChild(ul)
+
+        for (let i = 0; i < 7; i++) {
+        const li = document.createElement("li")
+        // FIGURE HOW TO BOLD STRING
+
+        ul.appendChild(li)
+        }
+        ul.childNodes[0].innerHTML = `<b>Capital: </b> ${listedCountry.capital}`
+        ul.childNodes[1].innerHTML = `<b>Population: </b> ${listedCountry.population}`
+        ul.childNodes[2].innerHTML = `<b>Common Name: </b> ${listedCountry.name.common }`
+        ul.childNodes[3].innerHTML = `<b>Official Name: </b> ${listedCountry.name.official}`
+        ul.childNodes[4].innerHTML = `<b>Region: </b> ${listedCountry.continents}`
+        ul.childNodes[5].innerHTML = `<b>Languages: </b> ${Object.values(listedCountry.languages)}`
+        // ADD CURRENCIES
+        
+        const body = document.querySelector("body")
+        body.appendChild(div)
+    })
+
+}
 
 
 
