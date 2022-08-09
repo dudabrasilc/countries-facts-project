@@ -38,17 +38,15 @@ function notListed() {
 
 
 function searchCountry(countryInput) {
-    // FETCH REQUEST
     fetch('https://restcountries.com/v3.1/all')
     .then(response => response.json())
     .then(countries => {
         const listedCountry = countries.find(country => {
             return countryInput === country.name.common })
-            // console.log(isListed)
             const searchOutput = document.querySelector("#searchOutput")
             searchOutput.replaceChildren()
-            const div = document.querySelector("#mainFacts")
-            div.replaceChildren()
+            const navBtnsOutput = document.querySelector("#navBtnsOutput")
+            navBtnsOutput.replaceChildren()
 
         if (listedCountry === undefined) {
             notListed()
@@ -59,6 +57,21 @@ function searchCountry(countryInput) {
                 curiousFacts(listedCountry)
         }                       
     })
+}
+
+
+function renderCountry(listedCountry) {
+    // create function renderCountry(isListed)
+    const img = document.createElement("img");
+    img.setAttribute("src", listedCountry.flags.png)
+    img.setAttribute("id", "flag")
+    console.log(listedCountry)
+    const h1 = document.createElement("h1");
+    h1.textContent = listedCountry.name.common;
+    h1.setAttribute("id", "name")
+    const searchOutput = document.querySelector("#searchOutput")
+    searchOutput.appendChild(h1)
+    searchOutput.appendChild(img)
 }
 
 
@@ -79,48 +92,35 @@ function renderButtons() {
     searchOutput.appendChild(div)
     const divBtns = document.querySelector(".buttons")
     const mainFactsSpan = divBtns.childNodes[0]
-    mainFactsSpan.firstChild.setAttribute("id", "main-facts")
+    mainFactsSpan.firstChild.setAttribute("id", "main-facts-btn")
     mainFactsSpan.firstChild.textContent = "Main Facts"
     const curiousFactsSpan = divBtns.childNodes[1]
-    curiousFactsSpan.firstChild.setAttribute("id", "curious-facts")
+    curiousFactsSpan.firstChild.setAttribute("id", "curious-facts-btn")
     curiousFactsSpan.firstChild.textContent = "Curious Facts"
     const nameTransl = divBtns.childNodes[2]
-    nameTransl.firstChild.setAttribute("id", "name-translations")
+    nameTransl.firstChild.setAttribute("id", "name-translations-btn")
     nameTransl.firstChild.textContent = "Country Name Translations"
 }
 
 
-function renderCountry(listedCountry) {
-    // create function renderCountry(isListed)
-    const img = document.createElement("img");
-    img.setAttribute("src", listedCountry.flags.png)
-    img.setAttribute("id", "flag")
-    console.log(listedCountry)
-    const h1 = document.createElement("h1");
-    h1.textContent = listedCountry.name.common;
-    h1.setAttribute("id", "name")
-    const searchOutput = document.querySelector("#searchOutput")
-    searchOutput.appendChild(h1)
-    searchOutput.appendChild(img)
-}
-
 
 function mainFacts(listedCountry) {
-    const mainBtn = document.querySelector("#main-facts")
     const ul = document.createElement("ul")
     const hr = document.createElement("hr")
+    const mainBtn = document.querySelector("#main-facts-btn")
 
     mainBtn.addEventListener("click", () => {
-        const div = document.querySelector("#mainFacts")
-
+        
+        const navBtnsOutput = document.querySelector("#navBtnsOutput")
+        navBtnsOutput.replaceChildren()
         ul.replaceChildren()
 
-        div.appendChild(hr)
+        navBtnsOutput.appendChild(hr)
         hr.setAttribute("id", "topline")
         hr.setAttribute("style", "visibility: visible")
-        div.appendChild(ul)
+        navBtnsOutput.appendChild(ul)
         ul.setAttribute("class", "info")
-        
+        ul.setAttribute("id", "mainFacts")
 
         for (let i = 0; i < 7; i++) {
         const li = document.createElement("li")
@@ -137,28 +137,28 @@ function mainFacts(listedCountry) {
         const cur = Object.values(listedCountry.currencies);
         ul.childNodes[6].innerHTML = `<b>Currency: </b> ${cur[0].name}`
         
-        const body = document.querySelector("body")
-        body.appendChild(div)
     })
 
 }
 
 
 function curiousFacts(listedCountry) {
-    const curiousBtn = document.querySelector("#curious-facts")
     const ul = document.createElement("ul")
     const hr = document.createElement("hr")
+    const curiousBtn = document.querySelector("#curious-facts-btn")
 
     curiousBtn.addEventListener("click", () => {
-        const div = document.querySelector("#mainFacts")
-
+        
+        const navBtnsOutput = document.querySelector("#navBtnsOutput")
+        navBtnsOutput.replaceChildren()
         ul.replaceChildren()
 
-        div.appendChild(hr)
+        navBtnsOutput.appendChild(hr)
         hr.setAttribute("id", "topline")
         hr.setAttribute("style", "visibility: visible")
-        div.appendChild(ul)
+        navBtnsOutput.appendChild(ul)
         ul.setAttribute("class", "info")
+        ul.setAttribute("id", "curiousFacts")
         
 
         for (let i = 0; i < 7; i++) {
@@ -167,7 +167,7 @@ function curiousFacts(listedCountry) {
 
         ul.appendChild(li)
         }
-        ul.childNodes[0].innerHTML = `<b>Capital: </b> ${listedCountry.capital}`
+        ul.childNodes[0].innerHTML = `<b>Coat of Arms: </b> ${listedCountry.coatOfArms.png}`
         ul.childNodes[1].innerHTML = `<b>Population: </b> ${listedCountry.population}`
         ul.childNodes[2].innerHTML = `<b>Common Name: </b> ${listedCountry.name.common }`
         ul.childNodes[3].innerHTML = `<b>Official Name: </b> ${listedCountry.name.official}`
@@ -176,11 +176,11 @@ function curiousFacts(listedCountry) {
         const cur = Object.values(listedCountry.currencies);
         ul.childNodes[6].innerHTML = `<b>Currency: </b> ${cur[0].name}`
         
-        const body = document.querySelector("body")
-        body.appendChild(div)
     })
 
 }
+
+
 
 
 
