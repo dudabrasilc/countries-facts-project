@@ -51,6 +51,7 @@ function searchCountry(countryInput) {
         if (listedCountry === undefined) {
             notListed()
         } else {
+            // figure out how to put mainFacts and curiousFacts inside renderButtons
                 renderCountry(listedCountry)
                 renderButtons()
                 mainFacts(listedCountry)
@@ -110,7 +111,6 @@ function mainFacts(listedCountry) {
     const mainBtn = document.querySelector("#main-facts-btn")
 
     mainBtn.addEventListener("click", () => {
-        
         const navBtnsOutput = document.querySelector("#navBtnsOutput")
         navBtnsOutput.replaceChildren()
         ul.replaceChildren()
@@ -147,8 +147,7 @@ function curiousFacts(listedCountry) {
     const hr = document.createElement("hr")
     const curiousBtn = document.querySelector("#curious-facts-btn")
 
-    curiousBtn.addEventListener("click", () => {
-        
+    curiousBtn.addEventListener("click", () => {   
         const navBtnsOutput = document.querySelector("#navBtnsOutput")
         navBtnsOutput.replaceChildren()
         ul.replaceChildren()
@@ -163,19 +162,34 @@ function curiousFacts(listedCountry) {
 
         for (let i = 0; i < 7; i++) {
         const li = document.createElement("li")
-        li.setAttribute("class", "item-list")
+        li.setAttribute("class", "item-lislt")
 
         ul.appendChild(li)
         }
-        ul.childNodes[0].innerHTML = `<b>Coat of Arms: </b> ${listedCountry.coatOfArms.png}`
-        ul.childNodes[1].innerHTML = `<b>Population: </b> ${listedCountry.population}`
-        ul.childNodes[2].innerHTML = `<b>Common Name: </b> ${listedCountry.name.common }`
-        ul.childNodes[3].innerHTML = `<b>Official Name: </b> ${listedCountry.name.official}`
-        ul.childNodes[4].innerHTML = `<b>Region: </b> ${listedCountry.continents}`
-        ul.childNodes[5].innerHTML = `<b>Languages: </b> ${Object.values(listedCountry.languages)}`
-        const cur = Object.values(listedCountry.currencies);
-        ul.childNodes[6].innerHTML = `<b>Currency: </b> ${cur[0].name}`
+        const div = document.createElement("div")
+        const img = document.createElement("img")
+        div.appendChild(img)
+        img.setAttribute("src", listedCountry.coatOfArms.png)
+        img.style.height = "70px"
+        img.style.width = "70px"
+        ul.childNodes[0].innerHTML = `<b>Coat of Arms: </b>`
+        ul.childNodes[0].appendChild(div)
         
+        ul.childNodes[1].innerHTML = `<b>First day of the week: </b> ${listedCountry.startOfWeek}`
+
+        if (listedCountry.independent === true) {
+            ul.childNodes[2].innerHTML = '<b>Independency: </b> Independent'
+        } else {
+        ul.childNodes[2].innerHTML = '<b>Independency: </b> Not-Independent'
+        }
+
+        ul.childNodes[3].innerHTML = `<b>Area: </b> ${listedCountry.area} km²`
+
+        const timeZones = Object.values(listedCountry.timezones)
+        ul.childNodes[4].innerHTML = `<b>Time Zones: </b> ${timeZones.join(", ")}`
+
+        const borders = Object.values(listedCountry.borders)
+        ul.childNodes[5].innerHTML = `<b>Borders: </b> ${borders.join(", ")}`
     })
 
 }
