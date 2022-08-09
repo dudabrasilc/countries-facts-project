@@ -174,10 +174,10 @@ html {
   }
 
   #topline {
-        height: 1px;
-        background-color: rgba(178, 172, 172, 0.762);
-        border: none;
-        margin-bottom: 20px;
+    height: 1px;
+    background-color: rgba(178, 172, 172, 0.762);
+    border: none;
+    margin-bottom: 20px;
   }
 
   
@@ -216,15 +216,26 @@ html {
     padding-left: 0;
   }
 
-  .item-list {
-    height: 30px;
-    line-height: 30px;
-    margin-left: 0;
+  #curiousFacts:first-child {
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.1rem;
+    margin-right: 0.2rem;
+  }
 
+  .item-list {
+    line-height: 30px
   }
   
   .info:first-child {
     margin-top: 0;
+    padding: 5px 10px 5px 25px;
+    list-style: none;
+    margin: 0;
+    vertical-align: middle;
   }
   
   .album {

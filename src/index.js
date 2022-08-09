@@ -160,9 +160,9 @@ function curiousFacts(listedCountry) {
         ul.setAttribute("id", "curiousFacts")
         
 
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 6; i++) {
         const li = document.createElement("li")
-        li.setAttribute("class", "item-lislt")
+        li.setAttribute("class", "item-list")
 
         ul.appendChild(li)
         }
@@ -170,8 +170,8 @@ function curiousFacts(listedCountry) {
         const img = document.createElement("img")
         div.appendChild(img)
         img.setAttribute("src", listedCountry.coatOfArms.png)
-        img.style.height = "70px"
-        img.style.width = "70px"
+        img.style.height = "90px"
+        img.style.width = "90px"
         ul.childNodes[0].innerHTML = `<b>Coat of Arms: </b>`
         ul.childNodes[0].appendChild(div)
         
