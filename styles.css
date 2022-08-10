@@ -1,311 +1,230 @@
 html {
-    height: 100%;
-    background-color: #b4d0c7a1;
-  }
-  
-  body {
-    margin-left: 6%;
-    margin-right: 6%;
-    
-  }
-  
-  header {
-    width:94%;
-    height:28%;
-    background-image: url("./images/form-background.png"); 
-    background-size:cover;
-    margin: auto;
-    padding: 5px;
-    border-top: 10px;
-    border-bottom: 10px;
-    border: 3px rgb(0, 0, 0) solid;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  height: 100%;
+  background-color: #a6cbbe9d;
+}
 
-  .header {
-    color: #156f71;
-    text-align: center;
-    padding: 5px;
-  }
-  
-  h1.header {
-    padding: 0px;
-    margin: 13px;
-    margin-top: 3px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: 500;
-    text-shadow: 3px 3px black;
-    font-size: 40pt;
-    margin-bottom: 3px;
-    cursor: pointer;
-    width:auto;
-    display: inline-block;
-    text-align: center;
-    position: relative;
-    left: 48%;
-    transform: translateX(-50%);
-    
-  }
-  
-  h4.header {
-    margin: 5px;
-    font-weight: bold;
-    font-family: optima;
-    color: black;
-    font-size: 15px;
-    margin-bottom: 0px;
-  }
-  
-  p.header {
-    margin-top: 2px;
-    font-family: optima;
-    font-weight: lighter;
-    font-size: medium;
-    margin-bottom: 19px;
-  }
+body {
+  margin-left: 6%;
+  margin-right: 6%;
+}
 
-  #subHeader {
-    color: black;
-    font-weight:600;
-    text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 5px;
-    font-size: 20pt;
-  }
+header {
+  width: 94%;
+  height: 28%;
+  background-image: url("./images/form-background.png");
+  background-size: cover;
+  margin: auto;
+  padding: 5px;
+  border-top: 10px;
+  border-bottom: 10px;
+  border: 3px rgb(0, 0, 0) solid;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-  #entry {
-    background-color: rgba(223, 229, 230, 0.56);
-    width: 62%;
-    margin:auto;
-    margin-bottom: 10px;
-    text-align: center;
-    color:rgb(0, 0, 0);
-    font-style: italic;
-    font-family: optima;
-    margin-top: 14px;
-    font-size: larger;
-    padding: 6px;
-    border: dotted rgb(7, 6, 6) 2px;
-    border-style: groove;
-  }
+.header {
+  color: #156f71;
+  text-align: center;
+  padding: 5px;
+}
 
-  #flag {
-    color: black;
-    /* font-weight:600; */
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    font-size: 80pt;
-    margin-bottom: 12px;
-    margin-top: 15px;
-  }
-  
-  h1#name {
-    text-align: center;
-    font-family: optima;
-    font-style: italic;
-    color: #156f71;
-    margin-bottom: 12px;
-    margin-top: 15px;
-    text-shadow: 3px 3px black;
-    font-size: 52pt;
-  }
-  
-  #searchBtn {
-    border: 2.3px rgb(0, 0, 0) solid;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 17px;
-    padding: 8px;
-    cursor: pointer;
-  }
-  
-  .button {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin: 8px;
-    font-weight:600;
-    font-family: optima;
-    background-color: rgba(34, 92, 106, 0.069);
-  }
+h1.header {
+  padding: 0px;
+  margin: 13px;
+  margin-top: 3px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+  text-shadow: 3px 3px black;
+  font-size: 40pt;
+  margin-bottom: 3px;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  left: 48%;
+  transform: translateX(-50%);
+}
 
-  .buttons {
-    visibility: hidden;
-    text-align: center;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    display: block;
-    padding: 7px;
-    border: 2px black;
-    border-style: solid;
-    width: fit-content;
-  }
-  
-  #formInput{
-    color:rgb(0, 0, 0);
-    background-color: #b4d0c775;
-    border: 2px rgb(0, 0, 0) solid;
-    font-family: optima;
-  }
-  
-  ::placeholder {
-    color: rgba(0, 0, 0, 0.75);
-    opacity: 1;
-  }
-  
-  #mainImg{
-    visibility: hidden;
-    width: 76%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display:block;
-    border: 2px dotted rgb(78, 20, 94);
-    margin-bottom: 35px;
-    margin-top: 17px;
-    border-radius: 12px;
-  }
+h4.header {
+  margin: 5px;
+  font-weight: bold;
+  font-family: optima;
+  color: black;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
 
-  #countryFacts {
-    visibility: hidden;
-  }
+p.header {
+  margin-top: 2px;
+  font-family: optima;
+  font-weight: lighter;
+  font-size: medium;
+  margin-bottom: 19px;
+}
 
-  #topline {
-    height: 1px;
-    background-color: rgba(178, 172, 172, 0.762);
-    border: none;
-    margin-bottom: 20px;
-  }
+#subHeader {
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 5px;
+  font-size: 20pt;
+}
 
-  
-  #artistDiscog {
-    visibility: hidden;
-  }
-  
-  #artistVids {
-    visibility: hidden;
-  }
-  
-  .mVids {
-    border-radius: 10px;
-    color: rgb(78, 20, 94);
-  }
-  
-  .albumImg {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 62%;
-    margin-top: 10px;
-    border: 1px black solid;
-  }
-  
-  .info {
-    text-align: center;
-    list-style-position: inside;
-    font-family: optima;
-    border: 2px black solid;
-    box-sizing: content-box;
-    padding: 15px;
-    margin: 15px;
-    text-indent: 10px;
-    background-color: rgba(255, 255, 255, 0.096);
-    padding-left: 0;
-  }
+#entry {
+  background-color: rgba(223, 229, 230, 0.56);
+  width: 62%;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  font-family: optima;
+  margin-top: 14px;
+  font-size: larger;
+  padding: 6px;
+  border: dotted rgb(7, 6, 6) 2px;
+  border-style: groove;
+}
 
-  #curiousFacts:first-child {
-    background-size: contain;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    position: relative;
-    top: 0.1rem;
-    margin-right: 0.2rem;
-  }
+#flag {
+  color: black;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-size: 80pt;
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
 
-  .item-list {
-    line-height: 30px
-  }
-  
-  .info:first-child {
-    margin-top: 0;
-    padding: 5px 10px 5px 25px;
-    list-style: none;
-    margin: 0;
-    vertical-align: middle;
-  }
-  
-  .album {
-    color: rgb(78, 20, 94);
-  }
-  
-  #artistDetail {
-    color: rgb(78, 20, 94);
-    border: 2px white solid;
-    border-width: 2px; 
-  }
-  
-  .vidplayer {
-    width: 95%;
-    height:auto;
-  }
-  
-  h3.title {
-    font-family: optima;
-    font-size: 20pt;
-  }
-  
-  .nav {
-    padding: 17px;
-    border: 1px black dotted;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    cursor: pointer;
-  }
-  
-  .nav:hover {
-    font-style: italic;
-    border: 1px black solid;
-  }
-  
-  ul {
-    text-align:left;
-    padding-left: 30%;
-  }
-  
-  #artistDetail > p:first-of-type {
-    font-size: large;
-    margin-top: 33px;
-  }
-  
-  .title {
-    text-shadow: rgba(255, 255, 255, 0.557) 1px 0 4px;
-    color: rgb(90, 20, 252);
-  }
-  
-  .vidContainer {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-  }
-  
-  .vidContainer iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  hr {
-    border-top: 2px dashed white;
-    border-bottom: 2px dashed white;
-    visibility: hidden;
-    width: 86%;
-    margin-bottom: 6px;
-    margin-top: 6px;
-    height: 1px;
-  }
+h1#name {
+  text-align: center;
+  font-family: optima;
+  font-style: italic;
+  color: #156f71;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  text-shadow: 3px 3px black;
+  font-size: 52pt;
+}
+
+#searchBtn {
+  border: 2.3px rgb(0, 0, 0) solid;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 17px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.button {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 8px;
+  font-weight: 600;
+  font-family: optima;
+  background-color: rgba(34, 92, 106, 0.069);
+}
+
+.buttons {
+  visibility: hidden;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: block;
+  padding: 7px;
+  display: none;
+  border: 2px black;
+  border-style: solid;
+  width: fit-content;
+}
+
+#formInput {
+  color: rgb(0, 0, 0);
+  background-color: #b4d0c775;
+  border: 2px rgb(0, 0, 0) solid;
+  font-family: optima;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
+}
+
+.list-header {
+  text-align: center;
+  font-family: optima;
+  font-style: italic;
+  color: #156f71;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  text-shadow: 1.5px 1.5px black;
+  font-size: 30pt;
+}
+
+#countryFacts {
+  visibility: hidden;
+}
+
+#topline {
+  height: 1px;
+  background-color: rgba(178, 172, 172, 0.762);
+  border: none;
+  margin-bottom: 20px;
+}
+
+.info {
+  text-align: center;
+  list-style-position: inside;
+  font-family: optima;
+  border: 2px black solid;
+  box-sizing: content-box;
+  padding: 15px;
+  margin: 15px;
+  text-indent: 10px;
+  background-color: rgba(255, 255, 255, 0.096);
+  padding-left: 0;
+}
+
+#curiousFacts:first-child {
+  background-size: contain;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 0.1rem;
+  margin-right: 0.2rem;
+}
+
+.item-list {
+  line-height: 30px
+}
+
+.info:first-child {
+  margin-top: 0;
+  padding: 5px 10px 5px 25px;
+  list-style: none;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.nav {
+  padding: 17px;
+  border: 1px black dotted;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.nav:hover {
+  font-style: italic;
+  border: 1px black solid;
+}
+
+ul {
+  text-align: left;
+  padding-left: 30%;
+}
