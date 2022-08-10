@@ -7,17 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function form() {
     const form = document.getElementById("entry")
-        // console.log(form)
+
         form.addEventListener("submit", e => {
-        // Prevent reload page default on submit event
+
         e.preventDefault();
-        // console.log(e.target)
 
-         // Get formInput value
+        
          let countryInput = document.querySelector("#formInput").value
-         // console.log(formInputValue)
 
-        // Clear formInput value
         form.reset()
 
         searchCountry(countryInput)
@@ -56,6 +53,8 @@ function searchCountry(countryInput) {
                 renderButtons()
                 mainFacts(listedCountry)
                 curiousFacts(listedCountry)
+                nameTranslations(listedCountry)
+                clearCountry()
         }                       
     })
 }
@@ -81,7 +80,7 @@ function renderButtons() {
     const div = document.createElement("div")
     div.setAttribute("class", "buttons")
     div.setAttribute("style", "visibility: visible;")
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
     const span = document.createElement("span")
     const button = document.createElement("button")
     button.setAttribute("class", "button nav")
@@ -101,6 +100,9 @@ function renderButtons() {
     const nameTransl = divBtns.childNodes[2]
     nameTransl.firstChild.setAttribute("id", "name-translations-btn")
     nameTransl.firstChild.textContent = "Country Name Translations"
+    const clearCountry = divBtns.childNodes[3]
+    clearCountry.firstChild.setAttribute("id", "clear-country-btn")
+    clearCountry.firstChild.textContent = "Clear Country"
 }
 
 
@@ -108,6 +110,7 @@ function renderButtons() {
 function mainFacts(listedCountry) {
     const ul = document.createElement("ul")
     const hr = document.createElement("hr")
+    const h2 = document.createElement("h2")
     const mainBtn = document.querySelector("#main-facts-btn")
 
     mainBtn.addEventListener("click", () => {
@@ -116,6 +119,9 @@ function mainFacts(listedCountry) {
         ul.replaceChildren()
 
         navBtnsOutput.appendChild(hr)
+        h2.setAttribute("class", "list-header")
+        h2.textContent = "Main Facts"
+        navBtnsOutput.appendChild(h2)
         hr.setAttribute("id", "topline")
         hr.setAttribute("style", "visibility: visible")
         navBtnsOutput.appendChild(ul)
@@ -133,9 +139,10 @@ function mainFacts(listedCountry) {
         ul.childNodes[2].innerHTML = `<b>Common Name: </b> ${listedCountry.name.common }`
         ul.childNodes[3].innerHTML = `<b>Official Name: </b> ${listedCountry.name.official}`
         ul.childNodes[4].innerHTML = `<b>Region: </b> ${listedCountry.continents}`
-        ul.childNodes[5].innerHTML = `<b>Languages: </b> ${Object.values(listedCountry.languages)}`
+        const lang = Object.values(listedCountry.languages)
+        ul.childNodes[5].innerHTML = `<b>Languages: </b> ${lang.join(", ")}`
         const cur = Object.values(listedCountry.currencies);
-        ul.childNodes[6].innerHTML = `<b>Currency: </b> ${cur[0].name}`
+        ul.childNodes[6].innerHTML = `<b>Currencies: </b> ${cur[0].name}`
         
     })
 
@@ -145,6 +152,8 @@ function mainFacts(listedCountry) {
 function curiousFacts(listedCountry) {
     const ul = document.createElement("ul")
     const hr = document.createElement("hr")
+    const h2 = document.createElement("h2")
+
     const curiousBtn = document.querySelector("#curious-facts-btn")
 
     curiousBtn.addEventListener("click", () => {   
@@ -153,6 +162,9 @@ function curiousFacts(listedCountry) {
         ul.replaceChildren()
 
         navBtnsOutput.appendChild(hr)
+        h2.setAttribute("class", "list-header")
+        h2.textContent = "Curious Facts"
+        navBtnsOutput.appendChild(h2)
         hr.setAttribute("id", "topline")
         hr.setAttribute("style", "visibility: visible")
         navBtnsOutput.appendChild(ul)
@@ -160,7 +172,7 @@ function curiousFacts(listedCountry) {
         ul.setAttribute("id", "curiousFacts")
         
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 7; i++) {
         const li = document.createElement("li")
         li.setAttribute("class", "item-list")
 
@@ -170,8 +182,8 @@ function curiousFacts(listedCountry) {
         const img = document.createElement("img")
         div.appendChild(img)
         img.setAttribute("src", listedCountry.coatOfArms.png)
-        img.style.height = "90px"
-        img.style.width = "90px"
+        img.style.height = "110px"
+        img.style.width = "110px"
         ul.childNodes[0].innerHTML = `<b>Coat of Arms: </b>`
         ul.childNodes[0].appendChild(div)
         
@@ -190,6 +202,12 @@ function curiousFacts(listedCountry) {
 
         const borders = Object.values(listedCountry.borders)
         ul.childNodes[5].innerHTML = `<b>Borders: </b> ${borders.join(", ")}`
+
+        if (listedCountry.unMember === true) {
+            ul.childNodes[6].innerHTML = '<b>United Nations Member: </b> Yes'
+        } else {
+            ul.childNodes[6].innerHTML = '<b>United Nations Member: </b> No'
+        }
     })
 
 }
@@ -198,6 +216,17 @@ function curiousFacts(listedCountry) {
 
 
 
+function clearCountry() {
+    const clearBtn = document.querySelector("#clear-country-btn")
+
+    clearBtn.addEventListener("click", () => {
+        const searchOutput = document.querySelector("#searchOutput")
+        searchOutput.replaceChildren()
+        const navBtnsOutput = document.querySelector("#navBtnsOutput")
+        navBtnsOutput.replaceChildren()
+    })
+    
+}
 
 
 
