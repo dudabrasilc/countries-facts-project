@@ -34,8 +34,8 @@ h1.header {
   margin: 13px;
   margin-top: 3px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 500;
-  text-shadow: 3px 3px black;
+  font-weight: 700;
+  text-shadow: 2px 2px black;
   font-size: 40pt;
   margin-bottom: 3px;
   cursor: pointer;
@@ -102,12 +102,11 @@ p.header {
 h1#name {
   text-align: center;
   font-family: optima;
-  font-style: italic;
   color: #156f71;
   margin-bottom: 12px;
   margin-top: 15px;
-  text-shadow: 3px 3px black;
-  font-size: 52pt;
+  text-shadow: 1.5px 1.5px black;
+  font-size: 40pt;
 }
 
 #searchBtn {
@@ -161,7 +160,7 @@ h1#name {
   color: #156f71;
   margin-bottom: 12px;
   margin-top: 15px;
-  text-shadow: 1.5px 1.5px black;
+  text-shadow: 1px 1px black;
   font-size: 30pt;
 }
 
@@ -181,12 +180,22 @@ h1#name {
   list-style-position: inside;
   font-family: optima;
   border: 2px black solid;
-  box-sizing: content-box;
   padding: 15px;
   margin: 15px;
   text-indent: 10px;
   background-color: rgba(255, 255, 255, 0.096);
-  padding-left: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 13px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  left: 48%;
+  transform: translateX(-50%);
 }
 
 #curiousFacts:first-child {
