@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
             let countryInput = document.querySelector("#formInput").value
             form.reset()
             searchCountry(countryInput)
-
         })
     }
     form()
@@ -20,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => response.json())
             .then(countries => {
                 const listedCountry = countries.find(country => {
-                    return countryInput === country.name.common
+                    return countryInput.toLowerCase() === country.name.common.toLowerCase()
                 })
                 const searchOutput = document.querySelector("#searchOutput")
                 searchOutput.replaceChildren()
@@ -70,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnsDiv.style.display = "block"
     }
 
-    
+
     function mainFacts(listedCountry) {
         const ul = document.createElement("ul")
         const hr = document.createElement("hr")
