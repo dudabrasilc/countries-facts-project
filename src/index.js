@@ -213,7 +213,28 @@ function curiousFacts(listedCountry) {
 }
 
 
+function nameTranslations(listedCountry) {
+    const ul = document.createElement("ul")
+    const hr = document.createElement("hr")
+    const h2 = document.createElement("h2")
+    const translBtn = document.querySelector("#name-translations-btn")
 
+    translBtn.addEventListener("click", () => {   
+        const navBtnsOutput = document.querySelector("#navBtnsOutput")
+        navBtnsOutput.replaceChildren()
+        ul.replaceChildren()
+
+        navBtnsOutput.appendChild(hr)
+        h2.setAttribute("class", "list-header")
+        h2.textContent = "Country Name Translations"
+        navBtnsOutput.appendChild(h2)
+        hr.setAttribute("id", "topline")
+        hr.setAttribute("style", "visibility: visible")
+        navBtnsOutput.appendChild(ul)
+        ul.setAttribute("class", "info")
+        ul.setAttribute("id", "countryTranslations")
+    })
+}
 
 
 function clearCountry() {
