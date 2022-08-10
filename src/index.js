@@ -233,6 +233,37 @@ function nameTranslations(listedCountry) {
         navBtnsOutput.appendChild(ul)
         ul.setAttribute("class", "info")
         ul.setAttribute("id", "countryTranslations")
+
+        const array = Object.entries(listedCountry.translations);
+        console.log(array)
+        array.forEach(language => {
+            const li = document.createElement("li")
+            li.setAttribute("class", "item-list")
+        ul.appendChild(li)
+        });
+
+        ul.childNodes[0].innerHTML = `<b>Arabic: </b> ${array[0][1].official}`
+        ul.childNodes[1].innerHTML = `<b>Czech: </b> ${array[1][1].official}`
+        ul.childNodes[2].innerHTML = `<b>Welsh: </b> ${array[2][1].official}`
+        ul.childNodes[3].innerHTML = `<b>German: </b> ${array[3][1].official}`
+        ul.childNodes[4].innerHTML = `<b>Estonian: </b> ${array[4][1].official}`
+        ul.childNodes[5].innerHTML = `<b>Finnish: </b> ${array[5][1].official}`
+        ul.childNodes[6].innerHTML = `<b>French: </b> ${array[6][1].official}`
+        ul.childNodes[7].innerHTML = `<b>Croatian: </b> ${array[7][1].official}`
+        ul.childNodes[8].innerHTML = `<b>Hunnic: </b> ${array[8][1].official}`
+        ul.childNodes[9].innerHTML = `<b>I.T.A.: </b> ${array[9][1].official}`
+        ul.childNodes[10].innerHTML = `<b>Japanese: </b> ${array[10][1].official}`
+        ul.childNodes[11].innerHTML = `<b>Korean: </b> ${array[11][1].official}`
+        ul.childNodes[12].innerHTML = `<b>Dutch: </b> ${array[12][1].official}`
+        ul.childNodes[13].innerHTML = `<b>Persian: </b> ${array[13][1].official}`
+        ul.childNodes[14].innerHTML = `<b>Polish: </b> ${array[14][1].official}`
+        ul.childNodes[15].innerHTML = `<b>Portuguese: </b> ${array[15][1].official}`
+        ul.childNodes[16].innerHTML = `<b>Russian: </b> ${array[16][1].official}`
+        ul.childNodes[17].innerHTML = `<b>Slovak: </b> ${array[17][1].official}`
+        ul.childNodes[18].innerHTML = `<b>Spanish: </b> ${array[18][1].official}`
+        ul.childNodes[19].innerHTML = `<b>Swedish: </b> ${array[19][1].official}`
+        ul.childNodes[20].innerHTML = `<b>Urdu: </b> ${array[20][1].official}`
+        ul.childNodes[21].innerHTML = `<b>Chinese: </b> ${array[21][1].official}`
     })
 }
 
