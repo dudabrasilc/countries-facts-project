@@ -9,7 +9,7 @@ To have direct access to the webpage, just click on the link:
 https://dudabrasilc.github.io/countries-facts-project/. 
   
 If you would like to download the files from the project, just click on Code and Download ZIP:  
-![](download-files.gif)
+![](readme-gifs/download-files.gif)
 
 ### Searching up a country
 The first step of the application is to type in a country that you would like to know more about. The data base contains 250 countries which you can search from!  
