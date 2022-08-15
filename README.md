@@ -22,7 +22,7 @@ Note: The form's search input is not case sensitive!
 ### Checking country's Main Facts
 Now to check the country's Main Facts, click on the "Main Facts" button on the nav bar under the flag:  
 
-![](readme.gifs/main-facts.gif)
+![](readme-gifs/main-facts.gif)
   
   
 ### Curious Facts and Country Name Translations
