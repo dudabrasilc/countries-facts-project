@@ -14,7 +14,8 @@ If you would like to download the files from the project, just click on Code and
 ### Searching up a country
 The first step of the application is to type in a country that you would like to know more about.  
 Once you are on the web page application, you will see an empty form. Just click on the form's empty space, type in a country and click the search button:  
-![](country-search.gif)
+![](country-search.gif). 
+
 
 ## Usage
 
