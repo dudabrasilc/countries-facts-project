@@ -9,7 +9,7 @@ To have direct access to the webpage, just click on the link:
 https://dudabrasilc.github.io/countries-facts-project/. 
   
 If you would like to download the files from the project, just click on code and Download ZIP:  
-![](download.gif). 
+![](download-files.gif). 
 
 ### Searching up a country
 
