@@ -13,17 +13,19 @@ If you would like to download the files from the project, just click on Code and
 
 ### Searching up a country
 The first step of the application is to type in a country that you would like to know more about. The data base contains 250 countries which you can search from!  
-Once you are on the web page application, you will see an empty form. Just click on the form's empty space, type in a country and click the search button:
+Once you are on the web page application, you will see an empty form. Just click on the form's empty space, type in a country and click the search button. 
+Note: The form's search input is not case sensitive!
   
 ![](search-country.gif)
   
 ### Checking country's Main Facts
-Now to check the country's Main Facts you just have to click on the "Main Facts" button of the nav bar under the flag:  
+Now to check the country's Main Facts, click on the "Main Facts" button on the nav bar under the flag:  
 
 ![](main-facts.gif)
   
 ### Curious Facts and Country Name Translations
 There are two other features that gives you information about the country you are searching for, they are: "Curious Facts" and "Country Name Translations". 
+  
 Note: The translations are available in 22 different languages!
   
 The two buttons are also available on the nav bar rendered under the country's flag, as shown below:
@@ -31,10 +33,20 @@ The two buttons are also available on the nav bar rendered under the country's f
 ![](curiousf-and-transl.gif)
   
 ### Clear Country
-If you would like to clear up the country you are currently searching, just click on the last nav bar button "Clear Country":
+If you would like to clear up the current country to start a new search, click on the last nav bar button "Clear Country":
   
 ![](clear-country.gif)
   
+### Not Listed Country
+In the case that a country is not listed, you will have the "Not Listed" output:
+      
+![](not-listed.gif)
+  
+If you get that output, first check for any misspelling.
+  
+Note: The country search input is based on the common name of a country, not it's official name.
+    
+
 
   
 
