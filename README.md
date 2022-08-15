@@ -8,11 +8,13 @@ This project contains an HTML file linking a CSS and JavaScript files, which con
 To have direct access to the webpage, just click on the link:  
 https://dudabrasilc.github.io/countries-facts-project/. 
   
-If you would like to download the files from the project, just click on code and Download ZIP:  
+If you would like to download the files from the project, just click on Code and Download ZIP:  
 ![](download-files.gif). 
 
 ### Searching up a country
-
+The first step of the application is to type in a country that you would like to know more about.  
+Once you are on the web page application, you will see an empty form. Just click on the form's empty space, type in a country and click the search button:  
+![](country-search.gif)
 
 ## Usage
 
