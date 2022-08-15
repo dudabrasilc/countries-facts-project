@@ -2,7 +2,7 @@
 
 Countries Facts is a single page web application which you can use to search a country and find out facts about it.
 
-## Description
+## Usage
 
 This project contains an HTML file linking a CSS and JavaScript files, which contribute for the style and functionality of the web page.  
 To have direct access to the webpage, just click on the link:  
@@ -13,7 +13,8 @@ If you would like to download the files from the project, just click on Code and
 
 ### Searching up a country
 The first step of the application is to type in a country that you would like to know more about. The data base contains 250 countries which you can search from!  
-Once you are on the web page application, you will see an empty form. Just click on the form's empty space, type in a country and click the search button:  
+Once you are on the web page application, you will see an empty form. Just click on the form's empty space, type in a country and click the search button:
+  
 ![](search-country.gif)
   
 ### Checking country's Main Facts
@@ -22,12 +23,20 @@ Now to check the country's Main Facts you just have to click on the "Main Facts"
 ![](main-facts.gif)
   
 ### Curious Facts and Country Name Translations
-There are two other features that gives you information about the country you are searching for, they are: Curious Facts and Country Name Translations.  
-Note: The translations are available in 22 different languages!  
-The two buttons are also available on the nav bar rendered under the country's flag, as shown below:  
+There are two other features that gives you information about the country you are searching for, they are: "Curious Facts" and "Country Name Translations". 
+Note: The translations are available in 22 different languages!
+  
+The two buttons are also available on the nav bar rendered under the country's flag, as shown below:
+  
 ![](curiousf-and-transl.gif)
+  
+### Clear Country
+If you would like to clear up the country you are currently searching, just click on the last nav bar button "Clear Country":
+  
+![](clear-country.gif)
+  
 
-## Usage
+  
 
 Add
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
