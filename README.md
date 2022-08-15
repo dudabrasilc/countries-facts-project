@@ -8,7 +8,7 @@ This project contains an HTML file linking a CSS and JavaScript files, which con
 To have direct access to the webpage, just click on the link:
 https://dudabrasilc.github.io/countries-facts-project/
 If you would like to download the files from the project, just click on code and Download ZIP:
-![](https://github.com/Your_Repository_Name/download.gif)
+![](https://github.com/countries-facts-project/download.gif)
 
 ### Searching up a country
 
