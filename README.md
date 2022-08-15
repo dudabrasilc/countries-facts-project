@@ -9,12 +9,17 @@ To have direct access to the webpage, just click on the link:
 https://dudabrasilc.github.io/countries-facts-project/. 
   
 If you would like to download the files from the project, just click on Code and Download ZIP:  
-![](download-files.gif). 
+![](download-files.gif)
 
 ### Searching up a country
 The first step of the application is to type in a country that you would like to know more about.  
 Once you are on the web page application, you will see an empty form. Just click on the form's empty space, type in a country and click the search button:  
-![](search-country.gif). 
+![](search-country.gif)
+  
+### Checking country's Main Facts
+Now to check the country's Main Facts you just have to click on the "Main Facts" button of the nav bar under the flag:  
+
+![](main-facts.gif)
 
 
 ## Usage
