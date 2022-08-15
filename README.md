@@ -54,5 +54,5 @@ Note: The country search input is based on the common name of a country, not it'
   
   
 ## Support
-For any questions related about the project's functionality, code, styles and usage, please reach out to:  
+For any questions related to the project's functionality, code, or usage, please reach out to:  
 brasildu@gmail.com
