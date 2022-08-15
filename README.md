@@ -1,6 +1,6 @@
 # Countries Facts
 
-Countries Facts is a single page web application which you can use to search a country and find out facts about it.
+Countries Facts is a single page web application which you can use to search up a country and find out facts about it.
 
 ## Usage
 
@@ -10,7 +10,7 @@ https://dudabrasilc.github.io/countries-facts-project/.
   
 If you would like to download the files from the project, just click on Code and Download ZIP:  
 ![](readme-gifs/download-files.gif)
-
+  
 ### Searching up a country
 The first step of the application is to type in a country that you would like to know more about. The data base contains 250 countries which you can search from!  
 Once you are on the web page application, you will see an empty form. Just click on the form's empty space, type in a country and click the search button. 
@@ -18,10 +18,12 @@ Note: The form's search input is not case sensitive!
   
 ![](readme-gifs/search-country.gif)
   
+  
 ### Checking country's Main Facts
 Now to check the country's Main Facts, click on the "Main Facts" button on the nav bar under the flag:  
 
 ![](readme.gifs/main-facts.gif)
+  
   
 ### Curious Facts and Country Name Translations
 There are two other features that gives you information about the country you are searching for, they are: "Curious Facts" and "Country Name Translations". 
@@ -32,10 +34,12 @@ The two buttons are also available on the nav bar rendered under the country's f
   
 ![](readme-gifs/curiousf-and-transl.gif)
   
+  
 ### Clear Country
 If you would like to clear up the current country to start a new search, click on the last nav bar button "Clear Country":
   
 ![](readme-gifs/clear-country.gif)
+  
   
 ### Not Listed Country
 In the case that a country is not listed, you will have the "Not Listed" output:
@@ -45,25 +49,8 @@ In the case that a country is not listed, you will have the "Not Listed" output:
 If you get that output, first check for any misspelling.
   
 Note: The country search input is based on the common name of a country, not it's official name.
-    
-
-
   
-
-Add
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
+  
 ## Support
-
-Add
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Contributing
-
-Add
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-Add
+For any questions related about the project's functionality, code, styles and usage, please reach out to:  
+brasildu@gmail.com
