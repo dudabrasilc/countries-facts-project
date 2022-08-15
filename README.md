@@ -12,7 +12,7 @@ If you would like to download the files from the project, just click on Code and
 ![](download-files.gif)
 
 ### Searching up a country
-The first step of the application is to type in a country that you would like to know more about.  
+The first step of the application is to type in a country that you would like to know more about. The data base contains 250 countries which you can search from!  
 Once you are on the web page application, you will see an empty form. Just click on the form's empty space, type in a country and click the search button:  
 ![](search-country.gif)
   
@@ -20,7 +20,12 @@ Once you are on the web page application, you will see an empty form. Just click
 Now to check the country's Main Facts you just have to click on the "Main Facts" button of the nav bar under the flag:  
 
 ![](main-facts.gif)
-
+  
+### Curious Facts and Country Name Translations
+There are two other features that gives you information about the country you are searching for, they are: Curious Facts and Country Name Translations.  
+Note: The translations are available in 22 different languages!  
+The two buttons are also available on the nav bar rendered under the country's flag, as shown below:  
+![](curiousf-and-transl.gif)
 
 ## Usage
 
