@@ -203,7 +203,7 @@ h1#name {
 }
 
 .item-list {
-  line-height: 30px
+  line-height: 30px;
 }
 
 .info:first-child {
