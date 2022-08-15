@@ -4,10 +4,14 @@ Countries Facts is a single page web application which you can use to search a c
 
 ## Description
 
-This project contains an HTML file linking a CSS and JavaScript files, which contribute for the style and functionality of the web page, in this order.
+This project contains an HTML file linking a CSS and JavaScript files, which contribute for the style and functionality of the web page.
+To have direct access to the webpage, just click on the link:
+https://dudabrasilc.github.io/countries-facts-project/
+If you would like to download the files from the project, just click on code and Download ZIP:
+![](https://github.com/Your_Repository_Name/download.gif)
 
 ### Searching up a country
-Once you have the HTML file opened in your browser, you will be able to see an form and an empty
+
 
 ## Usage
 
