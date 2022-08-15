@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-image: url("./images/form-background.png");
+  background-image: url("images/form-background.png");
   background-size: cover;
   margin: auto;
   padding: 5px;
