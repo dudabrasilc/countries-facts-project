@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
                 const searchOutput = document.querySelector("#searchOutput")
                 searchOutput.replaceChildren()
-                const navBtnsOutput = document.querySelector("#navBtnsOutput")
-                navBtnsOutput.replaceChildren()
                 if (listedCountry === undefined) {
                     notListed()
                 } else {
@@ -54,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = document.createElement("img");
         img.setAttribute("src", listedCountry.flags.png)
         img.setAttribute("id", "flag")
-        console.log(listedCountry)
         const h1 = document.createElement("h1");
         h1.textContent = listedCountry.name.common;
         h1.setAttribute("id", "name")
