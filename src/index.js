@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
                 const searchOutput = document.querySelector("#searchOutput")
                 searchOutput.replaceChildren()
+                const navBtnsOutput = document.querySelector("#navBtnsOutput")
+                navBtnsOutput.replaceChildren()
                 if (listedCountry === undefined) {
                     notListed()
                 } else {
