@@ -1,3 +1,5 @@
+<a href="https://www.buymeacoffee.com/dudabrasilc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="195" height="55"></a>
+
 # Countries Facts
 
 Countries Facts is a single page web application which you can use to search up a country and find out facts about it.
