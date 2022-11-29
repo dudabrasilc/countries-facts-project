@@ -4,12 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function form() {
         const form = document.getElementById("entry")
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            let countryInput = document.querySelector("#formInput").value
-            form.reset()
-            searchCountry(countryInput)
-        })
+        function handleSubmit(e) {
+                e.preventDefault();
+                let countryInput = document.querySelector("#formInput").value
+                form.reset()
+                searchCountry(countryInput)
+            }
+        form.addEventListener("submit", handleSubmit)
     }
     form()
 
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     clearCountry()
                 }
             })
+            
     }
 
 
@@ -116,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const hr = document.createElement("hr")
         const h2 = document.createElement("h2")
         const curiousBtn = document.querySelector("#curious-facts-btn")
-
+        
         curiousBtn.addEventListener("click", () => {
             const navBtnsOutput = document.querySelector("#navBtnsOutput")
             navBtnsOutput.replaceChildren()
@@ -215,8 +217,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ul.childNodes[18].innerHTML = `<b>Slovak: </b> ${array[18][1].official}`
             ul.childNodes[19].innerHTML = `<b>Spanish: </b> ${array[19][1].official}`
             ul.childNodes[20].innerHTML = `<b>Swedish: </b> ${array[20][1].official}`
-            ul.childNodes[21].innerHTML = `<b>Urdu: </b> ${array[21][1].official}`
-            ul.childNodes[22].innerHTML = `<b>Chinese: </b> ${array[22][1].official}`
+            ul.childNodes[21].innerHTML = `<b>Turkish: </b> ${array[21][1].official}`
+            ul.childNodes[22].innerHTML = `<b>Urdu: </b> ${array[22][1].official}`
+            ul.childNodes[23].innerHTML = `<b>Chinese: </b> ${array[23][1].official}`
         })
     }
 
