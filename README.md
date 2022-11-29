@@ -9,14 +9,13 @@ Created with:
 # Countries Facts
 
 Countries Facts is a single page web application which you can use to search up a country and find out facts about it.
-  
-## Usage
-This project contains an HTML file linking a CSS and JavaScript files, which contribute for the style and functionality of the web page.
-  
 
 ## Live Demo
 To have direct access to the webpage, click on the link:
 https://countries-facts-search.netlify.app/
+  
+## Usage
+This project contains an HTML file linking a CSS and JavaScript files, which contribute for the style and functionality of the web page.
   
 If you would like to download the files from the project, click on Code and Download ZIP:  
 ![](readme-gifs/download-files.gif)
